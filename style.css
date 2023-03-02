@@ -1,0 +1,102 @@
+body{
+    margin: 0%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80vh 20vh;
+    grid-template-areas: 
+    "gra"
+    "menu";
+}
+#menus{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(44, 42, 42);
+    grid-area: menu;
+}
+#gras{
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(29, 29, 29);
+    grid-area: gra;
+}
+.kraj1{
+    color: aliceblue;
+    text-align: center;
+    background-color: rgb(49, 49, 49);
+    width: 350px;
+    height: 300px;
+}
+.kraj2{
+    text-align: center;
+    background-color: aliceblue;
+    width: 250px;
+    height: 300px;
+}
+.flagi{
+    height: 150px;
+    width: 250px;
+}
+.odp{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
+    height: 300px;
+    width: 200px;
+}
+
+#punkty{
+    padding-left: 30px;
+    font-size: 100%;
+    color: azure;
+    position: absolute ;
+    top: 0px;
+    left: 0px;
+}
+#rzycia{
+    
+    padding-top: 20px;
+    padding-right: 30px;
+    position: absolute ;
+    top: 0px;
+    right: 0px;
+}
+
+.serce{
+    width: 100px;
+}
+#buttonik{
+    background-color: rgb(48, 53, 58);
+    border: 5px solid black;
+    color: black;
+    width: 100px;
+    height: 100px;
+}
+h3{
+    color: aliceblue;
+}
+
+.Light-mode{
+    background-color: rgb(255, 232, 202);
+    color: black;
+
+}
+.Dark-mode{
+    background-color: rgb(53, 53, 53);
+    color: aliceblue;
+}
+#mode{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 150px;
+    height: 100px;
+}
