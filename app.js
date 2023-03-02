@@ -72,7 +72,7 @@ console.log(pop)
    
     
 
-    gra.innerHTML = ""      //wyczyszczenie diva z grą i stworzenie diva z flagą i nazwą kraju
+    gra.innerHTML = ""      //stworzenie diva z flagą i nazwą kraju
 
     const div1 = document.createElement("div")
     
