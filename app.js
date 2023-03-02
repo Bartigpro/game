@@ -7,7 +7,7 @@ const gra = document.getElementById("gras")
 
 json = []
 
-async function getData(){
+async function getData(){       //uzyskanie danych na temat krajów
     const data = await fetch("https://restcountries.com/v2/all")
     json = await data.json()
    
@@ -22,23 +22,23 @@ async function getData(){
 
 getData()
 
-function losuj(){
+function losuj(){   //funkcja, która ma za zadanie wylosować nam kraj
     var max = json.length-1
     return Math.floor(Math.random() * max);
     
 }
 
 
-function losuj_kraje(){
+function losuj_kraje(){     
 
-    document.getElementById("buttonik").hidden = "hidden"
+    document.getElementById("buttonik").hidden = "hidden"   
     document.getElementById("hint").style.visibility = "visible"
 
    
 
 var kraj = json[losuj()]
 var kraj2 = json[losuj()]
-var kraj3 = json[losuj()]
+var kraj3 = json[losuj()]   
 var kraj4 = json[losuj()]
 
 if(kraj.capital == undefined || kraj2.capital == undefined || kraj3.capital == undefined || kraj4.capital == undefined || kraj == kraj2 || kraj == kraj3 || kraj == kraj4 || kraj2 == kraj3 || kraj2 == kraj4 || kraj3 == kraj4 ){
@@ -48,7 +48,7 @@ kraj2 = json[losuj()]
 kraj3 = json[losuj()]
 kraj4 = json[losuj()]
 
-}
+}   //zapobiegnięcie sytuacji, gdzie stolice lub kraje mogą się powtarzać w jednej rundzie 
  
 var losowanko = losuj_but()
 
@@ -72,7 +72,7 @@ console.log(pop)
    
     
 
-    gra.innerHTML = ""    
+    gra.innerHTML = ""      //wyczyszczenie diva z grą i stworzenie diva z flagą i nazwą kraju
 
     const div1 = document.createElement("div")
     
@@ -95,8 +95,7 @@ console.log(pop)
     const odp = document.createElement("div")
     odp.classList.add("odp")
 
-    const input = document.createElement("input")
-    
+   
     
 
     
@@ -133,6 +132,7 @@ console.log(pop)
     odp.appendChild(button2)
     odp.appendChild(button3)
     odp.appendChild(button4)
+    //stworzenie przycisków z odpowiedziami
 
 
 
@@ -152,7 +152,7 @@ console.log(pop)
 
 
 
-function losuj_but(){
+function losuj_but(){   //funkcja, która ma za zadanie wylosować, który z przycisków będzie zawierał stolicę pasującą do nazwy i flagi w drugim div'ie
 
 
     
@@ -161,7 +161,7 @@ function losuj_but(){
 
 }
 
-function check(pop, kraj){
+function check(pop, kraj){ //sprawdzanie, czy przycisk jest poprawny> Jeśli jest, dodaje użytkownikowi punkt, a jeśli nie, zabiera mu jedno serce
 
 
     
@@ -189,7 +189,7 @@ function check(pop, kraj){
         setTimeout(losuj_kraje(), 1500)
     }
    
-    if(lb == 3){
+    if(lb == 3){ //kiedy użytkownik straci każde z serc, gra się kończy
         gra.innerHTML = ""
         document.getElementById("buttonik").hidden = "hidden"
         const but = document.createElement("button")
@@ -211,7 +211,7 @@ function check(pop, kraj){
     
        
 
-function hint(){
+function hint(){ //jeśli użytkownik nie wie co wybrać, pierwsza litera stolicy może go oświecić ;)
     alert("Zaczyna się na: " + pop.capital[0])
 }
 
